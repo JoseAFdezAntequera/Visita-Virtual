@@ -2999,6 +2999,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4cd790ac0d37bdc46970f6688c6b5070, type: 2}
+    - target: {fileID: 3613279590571761569, guid: c76ef84bed7d25a4a9a41aa32f4c568d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.9
+      objectReference: {fileID: 0}
     - target: {fileID: 3613279590571761574, guid: c76ef84bed7d25a4a9a41aa32f4c568d, type: 3}
       propertyPath: m_Name
       value: Cuadro
