@@ -5,6 +5,9 @@ public class UiController : MonoBehaviour
     [SerializeField]
     private GameObject canvas;
 
+    [SerializeField]
+    private GameObject camaras;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/EscenaIsabel.unity
-    guid: 39e0df257e5187f478e57ee2ba67518a
+    path: Assets/Scenes/Splash.unity
+    guid: f8fda87140d49554a98d18f421507052
+  - enabled: 1
+    path: Assets/Scenes/MenuPrincipal.unity
+    guid: b95b3f1b77fe227428d66526a36a19cc
+  - enabled: 1
+    path: Assets/Scenes/VisitaVirtualConInteractividad.unity
+    guid: 2fae49486beb98f4daa999af7b0cbcca
+  - enabled: 1
+    path: Assets/Scenes/VisitaVirtualPrimeraPersona.unity
+    guid: 4512753b8964f7c46b5f14f4dfce57a2
+  - enabled: 1
+    path: Assets/Scenes/VisitaVirtualSinInteractividad.unity
+    guid: cc1e5c5daf94dd54c89f9a8cacef1b64
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
