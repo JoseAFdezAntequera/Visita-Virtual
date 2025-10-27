@@ -1,8 +1,9 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
-public class UiController : MonoBehaviour
+public class UI : MonoBehaviour
 {
     [SerializeField]
     private GameObject canvas;
@@ -16,10 +17,19 @@ public class UiController : MonoBehaviour
     [SerializeField]
     private GameObject camaras;
 
+    [SerializeField]
+    private GameObject FPSController;
+    [SerializeField]
+    private Texture2D manoCursor;
+    [SerializeField]
+    private GameObject mano;
+    private bool modoFiesta;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         estadoLuces = true;
+        modoFiesta = false;
         sliderIntensidadLuces.gameObject.GetComponent<Slider>().value = 1;
         canvas.gameObject.transform.GetChild(1)
             .gameObject.transform.GetChild(1)
@@ -36,9 +46,28 @@ public class UiController : MonoBehaviour
                 canvas.gameObject.SetActive(false);
                 Time.timeScale = 1.0f; //Activamos el tiempo para que siga la animación de la cámara
             }
-            else { 
+            else
+            {
                 canvas.gameObject.SetActive(true);
                 Time.timeScale = 0.0f; //Paramos el tiempo para que se pueda usar en medio de la animación de la cámara
+            }
+        }
+
+        //ModoFiesta
+        if (modoFiesta)
+        {
+            Color[] colores = { Color.cyan, Color.magenta, Color.red, Color.yellow, Color.blue, Color.green, Color.white };
+
+            for (int i = 0; i < luces.gameObject.transform.childCount; i++)
+            {
+                luces.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().color = colores[Random.Range(0, 6)];
+            }
+        }
+        else
+        {
+            for (int i = 0; i < luces.gameObject.transform.childCount; i++)
+            {
+                luces.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().color = Color.white;
             }
         }
     }
@@ -87,5 +116,34 @@ public class UiController : MonoBehaviour
             camaras.gameObject.transform.GetChild(i).gameObject.SetActive(false);
         }
         camaras.gameObject.transform.GetChild(posCamara).gameObject.SetActive(true);
+    }
+
+    //ModoFiesta
+    public void ModoFiestaOn()
+    {
+        modoFiesta = true;
+        estadoLuces = true;
+
+        canvas.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+
+        FPSController.gameObject.GetComponent<FirstPersonController>().enabled = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.SetCursor(manoCursor, Vector2.zero, CursorMode.Auto);
+        mano.SetActive(true);
+    }
+
+    public void ModoFiestaOff()
+    {
+        modoFiesta = false;
+        estadoLuces = false;
+
+        canvas.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+
+        FPSController.gameObject.GetComponent<FirstPersonController>().enabled = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.SetCursor(manoCursor, Vector2.zero, CursorMode.Auto);
+        mano.SetActive(true);
     }
 }

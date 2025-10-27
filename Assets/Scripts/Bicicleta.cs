@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class Bici : MonoBehaviour
+public class Bicicleta : MonoBehaviour
 {
     [SerializeField]
     private GameObject player;
+
     private GameObject ObjetosJosan;
 
     private void Start()
@@ -13,12 +14,13 @@ public class Bici : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) && gameObject.transform.parent == player.transform) {
+        if (Input.GetKeyDown(KeyCode.W) && gameObject.transform.parent == player.transform)
+        {
             //Animamos las ruedas hacia adelante
             gameObject.transform.GetChild(4).
                 gameObject.transform.GetChild(0).
-                gameObject.GetComponent<Animator>().SetTrigger("Avanza");
-            gameObject.transform.GetChild(5).gameObject.GetComponent<Animator>().SetTrigger("Avanza");
+                gameObject.GetComponent<Animator>().SetTrigger("Adelante");
+            gameObject.transform.GetChild(5).gameObject.GetComponent<Animator>().SetTrigger("Adelante");
 
             //Paramos el sonido de pasos
             player.GetComponent<AudioSource>().mute = true;
@@ -29,8 +31,8 @@ public class Bici : MonoBehaviour
             //Animamos las ruedas hacia atras
             gameObject.transform.GetChild(4).
                 gameObject.transform.GetChild(0).
-                gameObject.GetComponent<Animator>().SetTrigger("Retrocede");
-            gameObject.transform.GetChild(5).gameObject.GetComponent<Animator>().SetTrigger("Retrocede");
+                gameObject.GetComponent<Animator>().SetTrigger("Atras");
+            gameObject.transform.GetChild(5).gameObject.GetComponent<Animator>().SetTrigger("Atras");
 
             //Paramos el sonido de pasos
             player.GetComponent<AudioSource>().mute = true;
@@ -47,11 +49,11 @@ public class Bici : MonoBehaviour
         }
 
         //Giramos a la izquierda
-        if (Input.GetKeyDown(KeyCode.A) && gameObject.transform.parent == player.transform) 
+        if (Input.GetKeyDown(KeyCode.A) && gameObject.transform.parent == player.transform)
             gameObject.transform.GetChild(4).gameObject.GetComponent<Animator>().SetTrigger("GiroIzquierda");
 
         //Giramos a la derecha
-        if (Input.GetKeyDown(KeyCode.D) && gameObject.transform.parent == player.transform) 
+        if (Input.GetKeyDown(KeyCode.D) && gameObject.transform.parent == player.transform)
             gameObject.transform.GetChild(4).gameObject.GetComponent<Animator>().SetTrigger("GiroDerecha");
 
     }
