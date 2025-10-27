@@ -5828,6 +5828,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
     - target: {fileID: 12119200779588821, guid: a6adc6a991d08c34796937ae157de3c5, type: 3}
       propertyPath: m_Name
       value: IsabelScene
@@ -5845,6 +5846,29 @@ PrefabInstance:
       value: 57.77244
       objectReference: {fileID: 0}
     - target: {fileID: 4957953829998467867, guid: a6adc6a991d08c34796937ae157de3c5, type: 3}
+=======
+    - target: {fileID: 595702607714441344, guid: 0e3904d028e727a40b996a2cd05ac828, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 595702607714441344, guid: 0e3904d028e727a40b996a2cd05ac828, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489092650484655933, guid: 0e3904d028e727a40b996a2cd05ac828, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489092650484655933, guid: 0e3904d028e727a40b996a2cd05ac828, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489092650484655933, guid: 0e3904d028e727a40b996a2cd05ac828, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489092650484655933, guid: 0e3904d028e727a40b996a2cd05ac828, type: 3}
+>>>>>>> Stashed changes
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
@@ -5872,6 +5896,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 5991061248569403734, guid: 0e3904d028e727a40b996a2cd05ac828, type: 3}
+      propertyPath: m_Name
+      value: EscenaIsabel
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5884,4 +5915,8 @@ SceneRoots:
   - {fileID: 1779724607}
   - {fileID: 57994905}
   - {fileID: 1230577884}
+<<<<<<< Updated upstream
   - {fileID: 7665611280197985535}
+=======
+  - {fileID: 4955230496576174110}
+>>>>>>> Stashed changes
