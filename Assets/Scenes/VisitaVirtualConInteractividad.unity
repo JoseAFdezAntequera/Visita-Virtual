@@ -5171,6 +5171,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: JosanScene
       objectReference: {fileID: 0}
+    - target: {fileID: 6289441533516099793, guid: e88e3adf663dd574b948f4b5a0278f43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303426635697602462, guid: e88e3adf663dd574b948f4b5a0278f43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7039975463494025968, guid: e88e3adf663dd574b948f4b5a0278f43, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
