@@ -63,13 +63,6 @@ public class UI : MonoBehaviour
                 luces.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().color = colores[Random.Range(0, 6)];
             }
         }
-        else
-        {
-            for (int i = 0; i < luces.gameObject.transform.childCount; i++)
-            {
-                luces.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().color = Color.white;
-            }
-        }
     }
 
     //Cambia la intensidad de las luces
@@ -139,6 +132,11 @@ public class UI : MonoBehaviour
         estadoLuces = false;
 
         canvas.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+
+        for (int i = 0; i < luces.gameObject.transform.childCount; i++)
+        {
+            luces.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().color = Color.white;
+        }
 
         FPSController.gameObject.GetComponent<FirstPersonController>().enabled = true;
         Cursor.visible = false;

@@ -74,12 +74,13 @@ public class PickerColor : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if (colorPreview != null)
             colorPreview.color = color;
 
+        if (hexText != null)
+            hexText.text = ColorUtility.ToHtmlStringRGB(color);
+
+        // Actualiza color luces (Josan)
         for (int i = 0; i < luces.gameObject.transform.childCount; i++)
         {
             luces.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().color = color;
         }
-
-        if (hexText != null)
-            hexText.text = ColorUtility.ToHtmlStringRGB(color);
     }
 }
