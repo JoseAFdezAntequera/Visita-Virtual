@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
@@ -119,11 +120,14 @@ public class UI : MonoBehaviour
 
         canvas.gameObject.transform.GetChild(2).gameObject.SetActive(false);
 
+        if (SceneManager.GetActiveScene().name != "VisitaVirtualConInteractividad")
+        {
         FPSController.gameObject.GetComponent<FirstPersonController>().enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.SetCursor(manoCursor, Vector2.zero, CursorMode.Auto);
         mano.SetActive(true);
+        }
     }
 
     public void ModoFiestaOff()
@@ -138,10 +142,13 @@ public class UI : MonoBehaviour
             luces.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().color = Color.white;
         }
 
-        FPSController.gameObject.GetComponent<FirstPersonController>().enabled = true;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.SetCursor(manoCursor, Vector2.zero, CursorMode.Auto);
-        mano.SetActive(true);
+        if (SceneManager.GetActiveScene().name != "VisitaVirtualConInteractividad")
+        {
+            FPSController.gameObject.GetComponent<FirstPersonController>().enabled = true;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.SetCursor(manoCursor, Vector2.zero, CursorMode.Auto);
+            mano.SetActive(true);
+        }
     }
 }
